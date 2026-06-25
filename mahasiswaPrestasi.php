@@ -26,6 +26,7 @@ class MahasiswaPrestasi extends Mahasiswa {
 public function hitungTagihanSemester() {
     return $this->tarifUktNominal * 0.25;
 }
-    public function tampilkanSpesifikasiAkademik() { return ""; }
+public function tampilkanSpesifikasiAkademik() {
+    return "Instansi: " . $this->namaInstansiBeasiswa . " | Syarat IPK: " . $this->minimalIpkSyarat;
 }
 ?>

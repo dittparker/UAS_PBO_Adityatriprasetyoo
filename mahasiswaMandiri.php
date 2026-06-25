@@ -23,9 +23,15 @@ class MahasiswaMandiri extends Mahasiswa {
         return $db->query($sql);
     }
 
-public function hitungTagihanSemester() {
-    return $this->tarifUktNominal + 100000;
-}
-    public function tampilkanSpesifikasiAkademik() { return ""; }
-}
+    // =========================================================================
+    // IMPLEMENTASI METHOD ABSTRAK INDUK (POLIMORFISME)
+    // =========================================================================
+    public function hitungTagihanSemester() {
+        return $this->tarifUktNominal + 100000;
+    }
+
+    public function tampilkanSpesifikasiAkademik() {
+        return "Golongan UKT: " . $this->golonganUkt . " | Wali: " . $this->namaWali;
+    }
+} // Kurung kurawal penutup class harus paling bawah
 ?>
